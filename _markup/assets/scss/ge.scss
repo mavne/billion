@@ -1,3 +1,23 @@
 @import 'fonts_ge';
 @import 'variables';
 
+header .top .center .content .phone a{
+	font-family: 'Roboto _GEO Mt';
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: bold;
+}
+
+header .bottom .center .right nav ul li a{
+	font-family: 'Roboto _GEO Mt regular';
+	font-size: 14px;
+	line-height: 14px;
+}
+
+header .bottom .center .right .languages ul li a{
+	font-family: 'Roboto _GEO Mt';
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: bold;
+	text-transform: uppercase;
+}

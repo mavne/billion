@@ -31,4 +31,269 @@
   background-color: $color1;
 }
 
+.center{
+	margin: 0 auto;
+	width: $center;	
+}
 
+header{
+	@include makeNull;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+header .top{
+	@include makeNull;
+	height: 28px;
+}
+
+header .top .center .content{
+	@include makeNull;
+	float: right;
+}
+
+header .top .center .content .social{
+	@include makeNull;
+	list-style-type: none;
+	float: left;
+}
+
+header .top .center .content .social li{
+	@include makeNull;
+	display: block;
+	float: left;
+	margin-right: 12px;
+}
+
+header .top .center .content .social li a{
+	@include makeNull;
+	display: block;
+	width: 18px;
+	height: 18px;
+	text-decoration: none;
+	text-indent: -9999px;
+	position: relative;
+	margin-top: 5px;
+}
+
+header .top .center .content .social li a::after{
+	@include makeNull;
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: $color3;
+	border-radius: 100%;
+	@include trans('background-color', '600ms');
+}
+
+header .top .center .content .social li a:hover::after{
+	background-color: $mainRed;
+}
+
+header .top .center .content .social li a.facebook::after{
+	@include sprite('-1px -13px');
+}
+
+header .top .center .content .social li a.youtube::after{
+	@include sprite('-24px -13px');
+}
+
+header .top .center .content .social li a.instagram::after{
+	@include sprite('-46px -13px');
+}
+
+header .top .center .content .line{
+	@include makeNull;
+	width: 1px;
+	height: 20px;
+	float: left;
+	margin-top: 4px;
+	background-color: $color4;
+	margin-right: 12px;
+}
+
+header .top .center .content .phone{
+	@include makeNull;
+	height: 20px;
+	float: left;
+	margin-top: 4px;
+}
+
+header .top .center .content .phone a{
+	@include makeNull;
+	display: block;
+	position: relative;
+	height: 20px;
+	padding-left: 28px;
+	color: $color5;
+	text-decoration: none;
+	@include trans('color', '600ms');
+}
+
+header .top .center .content .phone a:hover{
+	color: $mainRed;
+}
+
+header .top .center .content .phone a::before{
+	content: "";
+	width: 18px;
+	height: 18px;
+	position: absolute;
+	top: calc(50% - 9px);
+	left: 0;
+	background-color: $mainRed;
+	border-radius: 100%;
+}
+
+header .top .center .content .phone a::after{
+	content: "";
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	top: calc(50% - 5px);
+	left: 4.5px;
+	background-color: $color2;
+	@include sprite('-1px -1px');
+}
+
+header .bottom{
+	@include makeNull;
+	width: 100%;
+	height: 88px;
+	background-color: $mainRed;
+}
+
+header .bottom .center .logo{
+	@include makeNull;
+	display: block;
+	text-decoration: none;
+	text-indent: -9999px;
+	width: 218px;
+	height: 46px;
+	float: left;
+	margin-top: 21px;
+	@include sprite('-4px -41px', 'true');
+	@include trans('opacity', '600ms');
+}
+
+header .bottom .center .logo:hover{
+	opacity: 0.8;
+}
+
+header .bottom .center .right{
+	@include makeNull;
+	float: right;
+}
+
+header .bottom .center .right nav{
+	@include makeNull;
+	float: left;
+	height: 88px;
+	display: flex;
+	align-items: center;
+}
+
+header .bottom .center .right nav ul{
+	@include makeNull;
+	list-style-type: none;
+}
+
+header .bottom .center .right nav ul li{
+	@include makeNull;
+	display: block;
+	float: left;
+	margin-right: 24px;
+}
+
+header .bottom .center .right nav ul li a{
+	@include makeNull;
+	display: block;
+	position: relative;
+	text-decoration: none;
+	color: $color2;
+}
+
+header .bottom .center .right nav ul li a::after{
+	content: "";
+	width: 0px;
+	height: 3px;
+	background-color: $color3;
+	position: absolute;
+	left: 0;
+	bottom: -9px;
+	@include trans('width', '600ms');
+}
+
+header .bottom .center .right nav ul li a.active::after{
+	width: 26px;
+}
+
+header .bottom .center .right nav ul li a:hover::after{
+	width: 26px;
+}
+
+header .bottom .center .right nav ul li ul{
+	display: none;
+}
+
+header .bottom .center .right .languages{
+	@include makeNull;
+	float: left;
+	height: 88px;
+	display: flex;
+	align-items: center;
+}
+
+header .bottom .center .right .languages ul{
+	@include makeNull;
+	list-style-type: none;
+}
+
+header .bottom .center .right .languages ul li{
+	@include makeNull;
+	display: block;
+	float: left;
+	margin-right: 10px;
+	padding-right: 10px;
+	position: relative;
+}
+
+header .bottom .center .right .languages ul li::after{
+	content: "";
+	width: 1px;
+	height: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	background-color: $color3;
+}
+
+header .bottom .center .right .languages ul li:last-child{
+	margin-right: 0px;
+	padding-right: 0px;
+}
+
+header .bottom .center .right .languages ul li:last-child::after{
+	content: none;
+}
+
+header .bottom .center .right .languages ul li a{
+	@include makeNull;
+	display: block;
+	text-decoration: none;
+	color: $color2;
+	@include trans('color', '600ms');
+}
+
+header .bottom .center .right .languages ul li a.active{
+	color: $color5;
+}
+
+header .bottom .center .right .languages ul li a:hover{
+	color: $color5;
+}
