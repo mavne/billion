@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'DM Luarsab Andronikashvili';
+    src: url('DMLuarsabAndronikashvili.eot');
+    src: url('DMLuarsabAndronikashvili.eot?#iefix') format('embedded-opentype'),
+        url('DMLuarsabAndronikashvili.woff2') format('woff2'),
+        url('DMLuarsabAndronikashvili.woff') format('woff'),
+        url('DMLuarsabAndronikashvili.ttf') format('truetype'),
+        url('DMLuarsabAndronikashvili.svg#DMLuarsabAndronikashvili') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

@@ -36,17 +36,27 @@
 	width: $center;	
 }
 
+.clearfix{
+	clear: both;
+}
+
+.imageHide{
+	display: none;
+}
+
 header{
 	@include makeNull;
 	width: 100%;
 	position: fixed;
 	top: 0;
 	left: 0;
+	z-index: 1000;
 }
 
 header .top{
 	@include makeNull;
 	height: 28px;
+	background-color: $color2;
 }
 
 header .top .center .content{
@@ -296,4 +306,306 @@ header .bottom .center .right .languages ul li a.active{
 
 header .bottom .center .right .languages ul li a:hover{
 	color: $color5;
+}
+
+.home main{
+	@include makeNull;
+	margin-top: 116px;
+	position: relative;
+}
+
+.home main .welcome{
+	@include makeNull;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+.home main .welcome .leaf{
+	@include makeNull;
+	width: 376px;
+	height: 192px;
+	text-indent: -9999px;
+	position: absolute;
+	top: 8px;
+	left: -112px;
+	background-image: url('../img/leaf.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+	transform: rotate(25deg);
+}
+
+.home main .welcome .wave{
+	@include makeNull;
+	width: 200%;
+	height: 520px;
+	text-indent: -9999px;
+	position: absolute;
+	left: 0;
+	bottom: -310px;
+	background-image: url('../img/wave.svg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	z-index: 1;
+	pointer-events: none;
+	animation: wave linear 50s infinite;
+}
+
+.home main .welcome .center {
+	position: relative;
+	height: 100%;
+	z-index: 2;
+}
+
+.home main .welcome .center .left{
+	@include makeNull;
+	width: 560px;
+	height: 100%;
+	float: left;
+	position: relative;
+	transform: translateX(-400px);
+	@include transCubic('transform', '1200ms');
+}
+
+.home main .welcome.g-visible .center .left{
+	transform: translateX(0px);
+}
+
+.home main .welcome .center .left .slogan{
+	@include makeNull;
+	max-width: 440px;
+	float: left;
+	color: $color6;
+	opacity: 0.15;
+	margin-top: 50px;
+	pointer-events: none;
+}
+
+.home main .welcome .center .left h2{
+	@include makeNull;
+	margin-top: 43px;
+	width: 295px;
+	clear: both;
+	float: left;
+	color: $color5;
+}
+
+.home main .welcome .center .left h1{
+	@include makeNull;
+	margin-top: 30px;
+	float: left;
+	clear: both;
+	color: $color7;
+}
+
+.home main .welcome .center .left .mainBtn{
+	@include makeNull;
+	float: left;
+	margin-top: 45px;
+	height: 58px;
+	background-color: $mainRed;
+	padding: 0 80px 0 18px;
+	position: relative;
+	border-radius: 29px;
+	color: $color2;
+	@include trans('background-color', '600ms');
+}
+
+.home main .welcome .center .left .mainBtn:hover{
+	background-color: $color3;
+}
+
+.home main .welcome .center .left .mainBtn em{
+	@include makeNull;
+	width: 46px;
+	height: 46px;
+	font-style: normal;
+	position: absolute;
+	top: calc(50% - 23px);
+	right: 9px;
+	background-color: $color2;
+	border-radius: 100%;
+	@include dropShadow('0px', '3px', '6px', '0px', 'rgba(0,0,0,0.16)');
+}
+
+.home main .welcome .center .left .mainBtn em::after{
+	@include makeNull;
+	content: "";
+	width: 22px;
+	height: 10px;
+	position: absolute;
+	left: calc(50% - 11px);
+	top: calc(50% - 5px);
+	@include sprite('-16px 0px');
+	background-color: $mainRed;
+}
+
+.home main .welcome .center .left .bubles{
+	@include makeNull;
+	width: 100%;
+	height: 110px;
+	position: absolute;
+	bottom: 30px;
+	left: 0;
+}
+
+.home main .welcome .center .left .bubles .buble{
+	@include makeNull;
+	border: solid 1px $color8;
+	position: absolute;
+	border-radius: 100%;
+	animation: moveBubble linear infinite;
+}
+
+.home main .welcome .center .left .bubles .buble.b1{
+	width: 14px;
+	height: 14px;
+	animation-duration: 8s;
+  animation-delay: 0s;
+  top: 0;
+  left: 0;
+}
+
+.home main .welcome .center .left .bubles .buble.b2{
+	width: 12px;
+	height: 12px;
+	animation-duration: 10s;
+  animation-delay: 2s;
+  bottom: 0;
+  left: 80px;
+}
+
+.home main .welcome .center .left .bubles .buble.b3{
+	width: 10px;
+	height: 10px;
+	animation-duration: 12s;
+  animation-delay: 4s;
+  top: 30px;
+  right: 80px;
+}
+
+.home main .welcome .center .left .bubles .buble.b4{
+	width: 12px;
+	height: 12px;
+	animation-duration: 14s;
+  animation-delay: 6s;
+  top: 0;
+  right: 0;
+}
+
+.home main .welcome .center .right{
+	@include makeNull;
+	width: calc(100% - 560px);
+	float: right;
+}
+
+.home main .welcome .center .right .fruits{
+	@include makeNull;
+	width: 1057px;
+	height: 431px;
+	position: absolute;
+	top: -54px;
+	right: -232px;
+	text-indent: -9999px;
+	background-image: url('../img/fruits-min.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	transform: translateX(400px);
+	@include transCubic('transform', '1200ms');
+}
+
+.home main .welcome.g-visible .center .right .fruits{
+	transform: translateX(0px);
+}
+
+.home main .welcome .center .right .bag{
+	@include makeNull;
+	width: 820px;
+	height: 700px;
+	position: absolute;
+	right: -70px;
+	bottom: 30px;
+	text-indent: -9999px;
+	background-image: url('../img/bag2-min.png');
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	background-size: contain;
+	transform: translateX(1000px);
+	@include transCubic('transform', '1200ms');
+}
+
+.home main .welcome.g-visible .center .right .bag{
+	transform: translateX(0px);
+}
+
+.home main .welcome .center .right .bubles{
+	@include makeNull;
+	width: 150px;
+	height: 100px;
+	position: absolute;
+	top: 215px;
+	right: -135px;
+}
+
+.home main .welcome .center .right .bubles .buble{
+	@include makeNull;
+	border: solid 1px $color8;
+	position: absolute;
+	border-radius: 100%;
+	animation: moveBubble linear infinite;
+}
+
+.home main .welcome .center .right .bubles .buble.b1{
+	width: 13px;
+	height: 13px;
+	animation-duration: 8s;
+  animation-delay: 0s;
+  bottom: 0;
+  left: 0;
+}
+
+.home main .welcome .center .right .bubles .buble.b2{
+	width: 10px;
+	height: 10px;
+	animation-duration: 10s;
+  animation-delay: 2s;
+  top: 0;
+  right: 35px;
+}
+
+.home main .welcome .center .right .bubles .buble.b3{
+	width: 7px;
+	height: 7px;
+	animation-duration: 12s;
+  animation-delay: 4s;
+  top: 35px;
+  right: 0px;
+}
+
+@keyframes moveBubble {
+  0% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(50px) translateX(25px);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+}
+
+@keyframes wave{
+	0% {
+		transform: translateX(0px);
+	}
+	50% {
+		transform: translateX(-50%);
+	}
+	100% {
+		transform: translateX(0%);
+	}
 }

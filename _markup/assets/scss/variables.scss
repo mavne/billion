@@ -4,6 +4,12 @@
   transition-timing-function: ease-in-out;
 }
 
+@mixin transCubic($property, $duration) {
+  transition-property: #{$property};
+	transition-duration: #{$duration};
+	transition-timing-function: cubic-bezier(0.01, 0.02, 0.14, 1);
+}
+
 @mixin scroll($width, $track, $thumb, $thumbHover) {
   /* width */
 	::-webkit-scrollbar {
@@ -74,5 +80,8 @@ $color2: white;
 $color3: #FDBD10;
 $color4: #F2F2F2;
 $color5: #707070;
+$color6: #C8C8C8;
+$color7: #292929;
+$color8: #C2C2C2;
 
 
