@@ -38,3 +38,16 @@
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'Roboto _Nusx';
+    src: url('/_markup/assets/fonts/roboto-nusx/RobotoNusx.eot');
+    src: url('/_markup/assets/fonts/roboto-nusx/RobotoNusx.eot?#iefix') format('embedded-opentype'),
+        url('/_markup/assets/fonts/roboto-nusx/RobotoNusx.woff2') format('woff2'),
+        url('/_markup/assets/fonts/roboto-nusx/RobotoNusx.woff') format('woff'),
+        url('/_markup/assets/fonts/roboto-nusx/RobotoNusx.ttf') format('truetype'),
+        url('/_markup/assets/fonts/roboto-nusx/RobotoNusx.svg#RobotoNusx') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
