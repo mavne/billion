@@ -30,7 +30,7 @@ class VisiableTracker{
 class Home{
 	welcomeSection(){
 		var height = $(window).height() - 116;
-		$('main').css('height', height+"px");
+		$('.home main .welcome').css('height', height+"px");
 	}
 
 	run(){

@@ -1,5 +1,5 @@
 <?php 
-$version = "1.0.4";
+$version = "1.0.6";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +20,12 @@ $version = "1.0.4";
 	<link rel="preload" as="image" href="https://billion.404.ge/_markup/assets/img/fruits-min.png">
 	<link rel="preload" as="image" href="https://billion.404.ge/_markup/assets/img/bag2-min.png">
 	<link rel="preload" as="image" href="https://billion.404.ge/_markup/assets/img/sprite.svg">
-
+	<link rel="preload" as="image" href="https://billion.404.ge/_markup/assets/img/s_f.svg">
+	<link rel="preload" as="image" href="https://billion.404.ge/_markup/assets/img/s_i.svg">
+	<link rel="preload" as="image" href="https://billion.404.ge/_markup/assets/img/s_y.svg">
+	<link rel="preload" as="image" href="https://billion.404.ge/_markup/assets/img/wave2.svg">
+	<link rel="preload" as="image" href="https://billion.404.ge/_markup/assets/img/papers.png">
+	<link rel="preload" as="image" href="https://billion.404.ge/_markup/assets/img/bottom.wave.svg">
 
 <script>
     var map, markers, myLatLng;
@@ -543,13 +548,63 @@ $version = "1.0.4";
 			</div>
 
 			<div class="clearfix"></div>
-			<a href=""><span>ყველა სიახლის ნახვა</span><em></em></a>
+			<a href="" class="all-news"><span>ყველა სიახლის ნახვა</span><em></em></a>
 		</div>
 	</section>
 </main>
 
 <footer>
+	<div class="center">
+		<h2 class="sec-title">კონტაქტი</h2>
 
+		<div class="row">
+			<div class="col-md-10">
+				<div class="row">
+					<div class="col-md-3">
+						<div class="fdata">
+							<h3>ოფისი</h3>
+							<p>გორგილაძის N3 , ბათუმი , საქართველო</p>
+						</div>
+					</div>
+
+					<div class="col-md-3">
+						<div class="fdata">
+							<h3>მეილი</h3>
+							<p><a href="">billion@gmail.com</a></p>
+							<p><a href="">billionvacancy@gmail.com</a></p>
+						</div>
+					</div>
+
+					<div class="col-md-3">
+						<div class="fdata">
+							<h3>ტელეფონი</h3>
+							<p><a href="">+995 555 123 345</a></p>
+							<p><a href="">+995 555 123 345</a></p>
+						</div>
+					</div>
+
+					<div class="col-md-3">
+						<h3>გამოგვყევი</h3>
+						<div class="fdata">
+							<ul>
+								<li><a href="" class="facebook">facebook</a></li>
+								<li><a href="" class="instagram">instagram</a></li>
+								<li><a href="" class="youtube">youtube</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div class="cart">cart</div>
+			</div>
+		</div>
+
+		<div class="copyright">
+			<p>ყველა უფლება დაცულია ©2023</p>
+			<a href="https://shindi.ge/" class="shindi" target="_blank">shindi</a>
+		</div>
+	</div>
 </footer>
 
 
