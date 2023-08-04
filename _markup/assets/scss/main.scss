@@ -2170,8 +2170,12 @@ footer .center .copyright a::after{
 	width: 100%;
 	background-color: $color11;
 	border-radius: 20px;
-	padding-top: 45px;
-	padding-bottom: 50px;
+	padding:45px;
+	@include trans('background-color', '600ms');
+}
+
+.about-page main .content-box .center .data-boxes .custom-row .data:hover .content{
+	background-color: $mainRed;
 }
 
 .about-page main .content-box .center .data-boxes .custom-row .data .content .icon{
@@ -2183,6 +2187,65 @@ footer .center .copyright a::after{
 	border-radius: 20px;
 	position: relative;
 	margin-bottom: 28px;
+}
+
+.about-page main .content-box .center .data-boxes .custom-row .data .content .icon::after{
+	@include makeNull;
+	content: "";
+	width: 62px;
+	height: 62px;
+	position: absolute;
+	top: calc(50% - 31px);
+	left: calc(50% - 31px);
+	background-color: $mainYellow;
+	@include trans('background-color', '600ms');
+}
+
+.about-page main .content-box .center .data-boxes .custom-row .data:hover .content .icon::after{
+	background-color: $mainRed;
+}
+
+.about-page main .content-box .center .data-boxes .custom-row .data .content .icon.cart::after{
+	@include sprite('-9px -376px');
+}
+
+.about-page main .content-box .center .data-boxes .custom-row .data .content .icon.likes::after{
+	@include sprite('-103px -378px');
+}
+
+.about-page main .content-box .center .data-boxes .custom-row .data .content .icon.followers::after{
+	@include sprite('-207px -377px');
+}
+
+.about-page main .content-box .center .data-boxes .custom-row .data .content .icon.staff::after{
+	@include sprite('-304px -379px');
+}
+
+.about-page main .content-box .center .data-boxes .custom-row .data .content .icon.products::after{
+	@include sprite('-401px -378px');
+}
+
+.about-page main .content-box .center .data-boxes .custom-row .data .content .number{
+	@include makeNull;
+	text-align: center;
+	color: $color5;
+	margin-bottom: 20px;
+	@include trans('color', '600ms');
+}
+
+.about-page main .content-box .center .data-boxes .custom-row .data:hover .content .number{
+	color: $color2;
+}
+
+.about-page main .content-box .center .data-boxes .custom-row .data .content p{
+	@include makeNull;
+	text-align: center;
+	color: $color6;
+	@include trans('color', '600ms');
+}
+
+.about-page main .content-box .center .data-boxes .custom-row .data:hover .content p{
+	color:$color2;
 }
 
 @-moz-document url-prefix() {
