@@ -2,7 +2,7 @@
 $version = "1.0.6";
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ka">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,64 +16,16 @@ $version = "1.0.6";
 	<link rel="stylesheet" type="text/css" href="/_markup/assets/css/ge.css?v=<?=$version?>">
 	<link rel="stylesheet" type="text/css" href="/_markup/assets/css/responsive_ge.css?v=<?=$version?>">
 
-	<link rel="preload" as="image" href="https://billion.404.ge/_markup/assets/img/leaf.svg">
-	<link rel="preload" as="image" href="https://billion.404.ge/_markup/assets/img/fruits-min.png">
-	<link rel="preload" as="image" href="https://billion.404.ge/_markup/assets/img/bag2-min.png">
-	<link rel="preload" as="image" href="https://billion.404.ge/_markup/assets/img/sprite.svg">
-	<link rel="preload" as="image" href="https://billion.404.ge/_markup/assets/img/s_f.svg">
-	<link rel="preload" as="image" href="https://billion.404.ge/_markup/assets/img/s_i.svg">
-	<link rel="preload" as="image" href="https://billion.404.ge/_markup/assets/img/s_y.svg">
-	<link rel="preload" as="image" href="https://billion.404.ge/_markup/assets/img/wave2.svg">
-	<link rel="preload" as="image" href="https://billion.404.ge/_markup/assets/img/papers.png">
-	<link rel="preload" as="image" href="https://billion.404.ge/_markup/assets/img/bottom.wave.svg">
-
-<script>
-    var map, markers, myLatLng;
-    var locations = [
-        { lat: 41.6329098036272, lng: 41.618115356584624 },
-        { lat: 41.63791340938079, lng: 41.629273345180316 },
-        { lat: 41.650677259216636, lng: 41.6384572281014 },
-    ];
-
-    function googleMap() {
-    	var mapStyle = [{"featureType":"administrative.land_parcel","stylers":[{"visibility":"off"}]},{"featureType":"landscape.man_made","stylers":[{"color":"#f2f2f2"}]},{"featureType":"landscape.natural","stylers":[{"visibility":"off"}]},{"featureType":"landscape.natural.landcover","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi.business","stylers":[{"visibility":"off"}]},{"featureType":"poi.park","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"road.arterial","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road.highway","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road.local","stylers":[{"visibility":"off"}]},{"featureType":"water","stylers":[{"color":"#ffffff"},{"visibility":"on"}]}];
-        
-        map = new google.maps.Map(document.getElementById('map'), {
-            center: locations[0], 
-            zoom: 12,
-            scrollwheel: false,
-            disableDefaultUI: true,
-            zoomControl: true,
-            styles: mapStyle
-        });
-
-        markers = locations.map(location => {
-            return new google.maps.Marker({
-                position: location,
-                map: map,
-                icon: '/_markup/assets/img/marker.svg',
-                animation: google.maps.Animation.DROP,
-                draggable: false
-            });
-        });
-    }
-
-    function initMaps() {
-        if (window.ggMaps) {
-            return false;
-        }
-        window.ggMaps = true;
-        const script = document.createElement('script');
-        script.type = 'text/javascript';
-        script.async = true;
-        script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCfLSXv1i5iAG3WdJzqWsVOaFddXAxiDUQ&callback=googleMap';
-        document.head.appendChild(script);
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-        // setTimeout(initMaps, 3500);
-    });
-</script>
+	<link rel="preload" as="image" crossorigin="anonymous" href="https://billion.404.ge/_markup/assets/img/leaf.svg">
+	<link rel="preload" as="image" crossorigin="anonymous" href="https://billion.404.ge/_markup/assets/img/fruits-min.png">
+	<link rel="preload" as="image" crossorigin="anonymous" href="https://billion.404.ge/_markup/assets/img/bag2-min.png">
+	<link rel="preload" as="image" crossorigin="anonymous" href="https://billion.404.ge/_markup/assets/img/sprite.svg">
+	<link rel="preload" as="image" crossorigin="anonymous" href="https://billion.404.ge/_markup/assets/img/s_f.svg">
+	<link rel="preload" as="image" crossorigin="anonymous" href="https://billion.404.ge/_markup/assets/img/s_i.svg">
+	<link rel="preload" as="image" crossorigin="anonymous" href="https://billion.404.ge/_markup/assets/img/s_y.svg">
+	<link rel="preload" as="image" crossorigin="anonymous" href="https://billion.404.ge/_markup/assets/img/wave2.svg">
+	<link rel="preload" as="image" crossorigin="anonymous" href="https://billion.404.ge/_markup/assets/img/papers.png">
+	<link rel="preload" as="image" crossorigin="anonymous" href="https://billion.404.ge/_markup/assets/img/bottom.wave.svg">
 </head>
 <body class="home">
 
@@ -318,8 +270,8 @@ $version = "1.0.6";
 				</div>
 
 				<div class="buttons">
-					<a href="javascript:void(0)" arial-label="prev" id="scroll-left-button">prev</a>
-					<a href="javascript:void(0)" arial-label="next" id="scroll-right-button">next</a>
+					<a href="javascript:void(0)" id="scroll-left-button">prev</a>
+					<a href="javascript:void(0)" id="scroll-right-button">next</a>
 				</div>
 
 				<div class="clearfix"></div>
@@ -386,7 +338,7 @@ $version = "1.0.6";
 
 				    			<p>საბეჭდი და ტიპოგრაფიული ინდუსტრიის უშინაარსო ტექსტია. იგი სტანდარტად 1500-იანი წლებიდან იქცა, როდესაც უცნობმა მბეჭდავმა </p>
 				    		</div>
-				    		<div class="button-arrow" arial-label="read more"></div>
+				    		<div class="button-arrow"></div>
 				    	</a>
 				    </div>
 
@@ -403,7 +355,7 @@ $version = "1.0.6";
 
 				    			<p>საბეჭდი და ტიპოგრაფიული ინდუსტრიის უშინაარსო ტექსტია. იგი სტანდარტად 1500-იანი წლებიდან იქცა, როდესაც უცნობმა მბეჭდავმა </p>
 				    		</div>
-				    		<div class="button-arrow" arial-label="read more"></div>
+				    		<div class="button-arrow"></div>
 				    	</a>
 				    </div>
 
@@ -420,7 +372,7 @@ $version = "1.0.6";
 
 				    			<p>საბეჭდი და ტიპოგრაფიული ინდუსტრიის უშინაარსო ტექსტია. იგი სტანდარტად 1500-იანი წლებიდან იქცა, როდესაც უცნობმა მბეჭდავმა </p>
 				    		</div>
-				    		<div class="button-arrow" arial-label="read more"></div>
+				    		<div class="button-arrow"></div>
 				    	</a>
 				    </div>
 
@@ -437,7 +389,7 @@ $version = "1.0.6";
 
 				    			<p>საბეჭდი და ტიპოგრაფიული ინდუსტრიის უშინაარსო ტექსტია. იგი სტანდარტად 1500-იანი წლებიდან იქცა, როდესაც უცნობმა მბეჭდავმა </p>
 				    		</div>
-				    		<div class="button-arrow" arial-label="read more"></div>
+				    		<div class="button-arrow"></div>
 				    	</a>
 				    </div>
 
@@ -454,7 +406,7 @@ $version = "1.0.6";
 
 				    			<p>საბეჭდი და ტიპოგრაფიული ინდუსტრიის უშინაარსო ტექსტია. იგი სტანდარტად 1500-იანი წლებიდან იქცა, როდესაც უცნობმა მბეჭდავმა </p>
 				    		</div>
-				    		<div class="button-arrow" arial-label="read more"></div>
+				    		<div class="button-arrow"></div>
 				    	</a>
 				    </div>
 
@@ -471,7 +423,7 @@ $version = "1.0.6";
 
 				    			<p>საბეჭდი და ტიპოგრაფიული ინდუსტრიის უშინაარსო ტექსტია. იგი სტანდარტად 1500-იანი წლებიდან იქცა, როდესაც უცნობმა მბეჭდავმა </p>
 				    		</div>
-				    		<div class="button-arrow" arial-label="read more"></div>
+				    		<div class="button-arrow"></div>
 				    	</a>
 				    </div>
 
@@ -488,7 +440,7 @@ $version = "1.0.6";
 
 				    			<p>საბეჭდი და ტიპოგრაფიული ინდუსტრიის უშინაარსო ტექსტია. იგი სტანდარტად 1500-იანი წლებიდან იქცა, როდესაც უცნობმა მბეჭდავმა </p>
 				    		</div>
-				    		<div class="button-arrow" arial-label="read more"></div>
+				    		<div class="button-arrow"></div>
 				    	</a>
 				    </div>
 
@@ -505,7 +457,7 @@ $version = "1.0.6";
 
 				    			<p>საბეჭდი და ტიპოგრაფიული ინდუსტრიის უშინაარსო ტექსტია. იგი სტანდარტად 1500-იანი წლებიდან იქცა, როდესაც უცნობმა მბეჭდავმა </p>
 				    		</div>
-				    		<div class="button-arrow" arial-label="read more"></div>
+				    		<div class="button-arrow"></div>
 				    	</a>
 				    </div>
 
@@ -524,7 +476,7 @@ $version = "1.0.6";
 				    			<p>საბეჭდი და ტიპოგრაფიული ინდუსტრიის უშინაარსო ტექსტია. იგი სტანდარტად 1500-იანი წლებიდან იქცა, როდესაც უცნობმა მბეჭდავმა </p>
 				    		</div>
 
-				    		<div class="button-arrow" arial-label="read more"></div>
+				    		<div class="button-arrow"></div>
 				    	</a>
 				    </div>
 
@@ -541,7 +493,7 @@ $version = "1.0.6";
 
 				    			<p>საბეჭდი და ტიპოგრაფიული ინდუსტრიის უშინაარსო ტექსტია. იგი სტანდარტად 1500-იანი წლებიდან იქცა, როდესაც უცნობმა მბეჭდავმა </p>
 				    		</div>
-				    		<div class="button-arrow" arial-label="read more"></div>
+				    		<div class="button-arrow"></div>
 				    	</a>
 				    </div>
 				</div>

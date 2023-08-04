@@ -48,6 +48,15 @@
   background-color: $color6;
 }
 
+*{
+	@include makeNull;
+	outline: 0px !important;
+}
+
+body{
+	position: relative;
+}
+
 html {
   scrollbar-width: thin; /* or 'auto' or 'none' */
   scrollbar-color: $mainRed $color6; /* thumb color, track color */
@@ -619,7 +628,7 @@ header .bottom .center .right .languages ul li a:hover{
 	margin-top: 30px;
 }
 
-.center h2.sec-title{
+.center .sec-title{
 	@include makeNull;
 	padding: 80px 0 20px 0;
 	display: inline-block;
@@ -629,15 +638,15 @@ header .bottom .center .right .languages ul li a:hover{
 	@include trans('transform', '1200ms');
 }
 
-.home main .about-us .center h2.sec-title{
+.home main .about-us .center .sec-title{
 	padding-top: 50px;
 }
 
-.g-visible .center h2.sec-title{
+.g-visible .center .sec-title{
 	transform: translateX(0px);
 }
 
-.center h2.sec-title::after{
+.center .sec-title::after{
 	@include makeNull;
 	content: "";
 	width: 50px;
@@ -647,6 +656,10 @@ header .bottom .center .right .languages ul li a:hover{
 	right: -50px;
 	@include sprite('-236px 0px', 'true');
 	transform: rotate(-45deg);
+}
+
+.home main .about-us .center .sec-title::after{
+	top: 55px;
 }
 
 .home main .about-us .center .content{
@@ -1584,6 +1597,594 @@ footer .center .copyright a::after{
 	@include sprite('-392px -4px', 'true');
 }
 
+.inner-page::before{
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-image: url('../img/foods.bg.svg');
+	background-size: contain;
+	background-repeat: repeat;
+	background-position: center;
+	opacity: 0.1;
+	z-index: 1;
+}
+
+.inner-page main{
+	margin-top: 116px;
+	min-height: 500px;
+	position: relative;
+}
+
+.inner-page main::before{
+	content: "";
+	width: 100%;
+	height: 496px;
+	position: absolute;
+	top: -198px;
+	left: 0;
+	background-image: url('../img/inner.top.wave.svg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: top center;
+	z-index: 1;
+}
+
+.inner-page main section{
+	position: relative;
+	z-index: 2;
+}
+
+.inner-page footer{
+	margin-top: 0px;
+	padding-top: 150px;
+	background-image: url('../img/footer.wave.svg');
+	background-size: cover;
+	background-position: bottom center;
+	position: relative;
+	z-index: 2;
+}
+
+.inner-page footer .fdata{
+	margin-bottom: 50px;
+}
+
+.inner-page .center .sec-title::after{
+	content: none;
+}
+
+/* market map START */
+.inner-page main .market-map{
+	@include makeNull;
+}
+
+.inner-page main .market-map .center .map-box{
+	@include makeNull;
+	width: 100%;
+	height: 550px;
+	border-radius: 20px;
+	border: solid 1px $color6;
+	background-color: $color2;
+	overflow: hidden;
+	transform: translateX(1200px);
+	@include trans('transform', '1200ms');
+}
+
+.inner-page main .market-map.g-visible .center .map-box{
+	transform: translateX(0px);
+}
+
+.inner-page main .market-map .center .map-box .addresses{
+	@include makeNull;
+	width: calc(100% - 1080px);
+	height: 490px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	float: left;
+	margin-top: 35px;
+	margin-bottom: 35px;
+	margin-left: 35px;
+}
+
+.inner-page main .market-map .center .map-box .addresses ul{
+	@include makeNull;
+	list-style-type: none;
+}
+
+.inner-page main .market-map .center .map-box .addresses ul li{
+	@include makeNull;
+	display: block;
+	margin-bottom: 25px;
+}
+
+.inner-page main .market-map .center .map-box .addresses ul li:last-child{
+	margin-bottom: 0px;
+}
+
+.inner-page main .market-map .center .map-box .addresses ul li a{
+	@include makeNull;
+	display: block;
+	text-decoration: none;
+	padding-left: 25px;
+	padding-right: 25px;
+	color: $color5;
+	position: relative;
+	@include trans('color', '600ms');
+}
+
+.inner-page main .market-map .center .map-box .addresses ul li a::before{
+	content: "";
+	width: 12px;
+	height: 24px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	@include sprite('-79px -3px');
+	background-color: $color5;
+	@include trans('background-color', '600ms');
+}
+
+.inner-page main .market-map .center .map-box .addresses ul li a:hover{
+	color: $mainRed;
+}
+
+.inner-page main .market-map .center .map-box .addresses ul li a:hover::before{
+	background-color: $mainRed;
+}
+
+.inner-page main .market-map .center .map-box .addresses ul li a.active{
+	color: $mainRed;
+}
+
+.inner-page main .market-map .center .map-box .addresses ul li a.active::before{
+	background-color: $mainRed;
+}
+
+.inner-page main .market-map .center .map-box .right{
+	@include makeNull;
+	width: 970px;
+	height: 550px;
+	position: relative;
+	float: right;
+}
+
+.inner-page main .market-map .center .map-box .right .top{
+	@include makeNull;
+	position: absolute;
+	top: 30px;
+	left: -45px;
+	z-index: 2;
+}
+
+.inner-page main .market-map .center .map-box .right .top ul{
+	@include makeNull;
+	list-style-type: none;
+}
+
+.inner-page main .market-map .center .map-box .right .top ul li{
+	@include makeNull;
+	display: inline-block;
+	margin-right: 5px;
+}
+
+.inner-page main .market-map .center .map-box .right .top ul li a{
+	@include makeNull;
+	display: block;
+	text-decoration: none;
+	border-radius: 29px;
+	padding-left: 55px;
+	padding-right: 17px;
+	border: solid 1px $color6;
+	background-color: $color2;
+	color: $color5;
+	@include trans('background-color, color, border-color', '600ms');
+	position: relative;
+}
+
+.inner-page main .market-map .center .map-box .right .top ul li a:hover{
+	background-color: $mainRed;
+	border-color: $mainRed;
+	color: $color2;
+}
+
+.inner-page main .market-map .center .map-box .right .top ul li a::before{
+	content: "";
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	left: 10px;
+	top: calc(50% - 15px);
+	background-color: $mainYellow;
+}
+
+.inner-page main .market-map .center .map-box .right .top ul li a::after{
+	content: "";
+	width: 1px;
+	height: 28px;
+	position: absolute;
+	left: 45px;
+	top: calc(50% - 14px);
+	background-color: $mainYellow;
+}
+
+.inner-page main .market-map .center .map-box .right .top ul li a.markets_list::before{
+	@include sprite('-393px -34px');
+}
+.inner-page main .market-map .center .map-box .right .top ul li a.tone_list::before{
+	@include sprite('-436px -34px');
+}
+.inner-page main .market-map .center .map-box .right .top ul li a.fastfood_list::before{
+	@include sprite('-414px -69px');
+}
+
+.inner-page main .market-map .center .map-box .right .top ul li a.active{
+	background-color: $mainRed;
+	border-color: $mainRed;
+	color: $color2;
+}
+
+.inner-page main .market-map .center .map-box .right .map{
+	@include makeNull;
+	width: 100%;
+	height: 550px;
+	position: relative;
+	z-index: 1;
+}
+
+.inner-page main .market-map .center .map-box .right .map .loader{
+	@include makeNull;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: calc(50% - 15px);
+	left: calc(50% - 15px);
+}
+
+.inner-page main .market-map .center .map-box .right .map .loader::after{
+	content: "";
+	width: 100%;
+	height: 100%;
+	-webkit-mask-image: url('../img/loader.svg');
+	mask-image: url('../img/loader.svg');
+	-webkit-mask-size: contain;
+	mask-size: contain;
+	-webkit-mask-repeat: no-repeat;	
+	mask-repeat: no-repeat;	
+	-webkit-mask-position: center;
+	mask-position: center;
+	background-color: $mainRed;
+	animation: rotate 2s linear infinite;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+/* market map END */
+
+.discount-page main::before{
+	content: none;
+}
+
+.discount-page .center .sec-title{
+	padding: 60px 0;
+}
+
+.discount-page .content-box .image-box{
+	@include makeNull;
+	width: 536px;
+	height: 364px;
+	position: relative;
+	border-radius: 20px;
+	overflow: hidden;
+	float: left;
+	transform: translateX(-400px);
+	@include trans('transform', '1200ms');
+}
+
+.discount-page .content-box.g-visible .image-box{
+	transform: translateX(0px);
+}
+
+.discount-page .content-box .image-box img{
+	@include makeNull;
+	width: 536px;
+	height: 364px;
+	object-fit: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	@include trans('transform', '600ms');
+}
+
+.discount-page .content-box .image-box:hover img{
+	transform: scale(1.1);
+}
+
+.discount-page .content-box .content{
+	@include makeNull;
+	transform: translateX(400px);
+	@include trans('transform', '1200ms');
+}
+
+.discount-page .content-box.g-visible .content{
+	transform: translateX(0px);
+}
+
+.discount-page .content-box .content h3{
+	@include makeNull;
+	color: $color5;
+	margin-bottom: 20px;
+}
+
+.discount-page .content-box .content p{
+	@include makeNull;
+	color: $color9;
+	margin-bottom: 15px;
+}
+
+.production-page main{
+	width: 100%;
+	overflow: hidden;
+}
+
+.production-page main::before{
+	content: none;
+}
+
+.production-page main .content-box{
+	@include makeNull;
+}
+
+.production-page main .content-box .center .backlink-title{
+	@include makeNull;
+	padding: 70px 0;
+	transform: translateX(400px);
+	@include trans('transform', '1200ms');
+}
+
+.production-page main .content-box.g-visible .center .backlink-title{
+	transform: translateX(0px);
+}
+
+.production-page main .content-box .center .backlink-title span a{
+	@include makeNull;
+	display: block;
+	text-decoration: none;
+	position: relative;
+	padding-left: 30px;
+	color: $mainRed;
+	@include trans('color', '600ms');
+}
+
+.production-page main .content-box .center .backlink-title span a:hover{
+	color: $color5;
+}
+
+.production-page main .content-box .center .backlink-title span a::before{
+	@include makeNull;
+	content: "";
+	width: 22px;
+	height: 10px;
+	position: absolute;
+	left: 0;
+	top: calc(50% - 5px);
+	@include sprite('-16px 0px');
+	background-color: $mainRed;
+	transform: rotate(180deg);
+	@include trans('background-color', '600ms');
+}
+
+.production-page main .content-box .center .backlink-title span a:hover::before{
+	background-color: $color5;
+}
+
+.production-page main .content-box .center .production-list{
+	@include makeNull;
+	transform: translateX(-1000px);
+	@include trans('transform', '1200ms');
+}
+
+.production-page main .content-box.g-visible .center .production-list{
+	transform: translateX(0px);
+}
+
+.production-page main .content-box .center .production-list .row{
+	margin-left: -8px;
+	margin-right: -8px;
+}
+
+.production-page main .content-box .center .production-list .product{
+	flex: 0 0 auto;
+  width: 20%;
+	padding-right: 8px;
+	padding-left: 8px;
+	text-decoration: none;
+	display: block;
+	margin-bottom: 60px;
+}
+
+.production-page main .content-box .center .production-list .product .image-box{
+	@include makeNull;
+	width: 100%;
+	height: 222px;
+	position: relative;
+	border-radius: 20px;
+	overflow: hidden;
+	margin-bottom: 25px;
+}
+
+.production-page main .content-box .center .production-list .product .image-box img{
+	@include makeNull;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	object-fit: cover;
+	@include trans('transform', '600ms');
+}
+
+.production-page main .content-box .center .production-list .product .image-box:hover img{
+	transform: scale(1.1);
+}
+
+.production-page main .content-box .center .production-list .product p{
+	@include makeNull;
+	color: $color5;
+	@include trans('color', '600ms');
+}
+
+.production-page main .content-box .center .production-list .product:hover p{
+	color: $mainRed;
+}
+
+.production-page main .content-box .center .pagination{
+	@include makeNull;
+	width: 100%;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.production-page main .content-box .center .pagination ul{
+	@include makeNull;
+	margin: 0 auto;
+	list-style-type: none;
+}
+
+.production-page main .content-box .center .pagination ul li{
+	@include makeNull;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.production-page main .content-box .center .pagination ul li:last-child{
+	margin-right: 0px;
+}
+
+.production-page main .content-box .center .pagination ul li a{
+	@include makeNull;
+	width: 24px;
+	height: 24px;
+	text-decoration: none;
+  display: block;
+	border-radius: 100%;
+	border: solid 1px $color6;
+	background-color: $color2;
+	color: $color6;
+	@include trans('background-color, border-color, color', '600ms');
+}
+
+.production-page main .content-box .center .pagination ul li a.active,
+.production-page main .content-box .center .pagination ul li a:hover{
+	background-color: $color1;
+	border-color: $color1;
+	color: $color2;
+}
+
+.about-page main::before{
+	content: none;
+}
+
+.about-page .center .sec-title{
+	padding: 60px 0;
+}
+
+.about-page .content-box .image-box{
+	@include makeNull;
+	width: 536px;
+	height: 364px;
+	position: relative;
+	border-radius: 20px;
+	overflow: hidden;
+	float: left;
+	transform: translateX(-400px);
+	@include trans('transform', '1200ms');
+}
+
+.about-page .content-box.g-visible .image-box{
+	transform: translateX(0px);
+}
+
+.about-page .content-box .image-box img{
+	@include makeNull;
+	width: 536px;
+	height: 364px;
+	object-fit: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	@include trans('transform', '600ms');
+}
+
+.about-page .content-box .image-box:hover img{
+	transform: scale(1.1);
+}
+
+.about-page .content-box .content{
+	@include makeNull;
+	transform: translateX(400px);
+	@include trans('transform', '1200ms');
+}
+
+.about-page .content-box.g-visible .content{
+	transform: translateX(0px);
+}
+
+.about-page .content-box .content h3{
+	@include makeNull;
+	color: $color5;
+	margin-bottom: 20px;
+}
+
+.about-page .content-box .content p{
+	@include makeNull;
+	color: $color9;
+	margin-bottom: 15px;
+}
+
+.about-page main .content-box .center .data-boxes{
+	@include makeNull;
+	width: 100%;
+	margin-top: 100px;
+	margin-bottom: 35px;
+}
+
+.about-page main .content-box .center .data-boxes .custom-row{
+	display: flex;
+  flex-wrap: wrap;
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.about-page main .content-box .center .data-boxes .custom-row .data{
+	display: flex;
+	flex: 0 0 auto;
+  width: 20%;
+	padding-right: 8px;
+	padding-left: 8px;
+}
+
+.about-page main .content-box .center .data-boxes .custom-row .data .content{
+	@include makeNull;
+	width: 100%;
+	background-color: $color11;
+	border-radius: 20px;
+	padding-top: 45px;
+	padding-bottom: 50px;
+}
+
+.about-page main .content-box .center .data-boxes .custom-row .data .content .icon{
+	@include makeNull;
+	margin: 0 auto;
+	width: 109px;
+	height: 109px;
+	background-color: $color2;
+	border-radius: 20px;
+	position: relative;
+	margin-bottom: 28px;
+}
+
 @-moz-document url-prefix() {
   .home main .about-us .center .content .buttons{
   	margin-top: -28px;
@@ -1612,4 +2213,13 @@ footer .center .copyright a::after{
 	100% {
 		transform: translateX(0%);
 	}
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

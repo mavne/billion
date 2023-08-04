@@ -51,7 +51,7 @@ header .bottom .center .right .languages ul li a{
 	font-weight: bold;
 }
 
-.center h2.sec-title{
+.center .sec-title{
 	font-family: 'Roboto _GEO Mt';
 	font-size: 40px;
 	line-height: 40px;
@@ -144,4 +144,55 @@ footer p a{
 	font-family: 'Roboto _Nusx';
 	font-size: 16px;
 	line-height: 16px;
+}
+
+.inner-page main .market-map .center .map-box .right .top ul li a{
+	font-family: 'Roboto _GEO Mt regular';
+	font-size: 14px;
+	line-height: 40px;
+}
+
+.discount-page .content-box .content h3{
+	font-family: 'Roboto _GEO Mt';
+	font-size: 16px;
+	line-height: 16px;
+	font-weight: bold;
+}
+
+.discount-page .content-box .content p{
+	font-family: 'Roboto _Nusx';
+	font-size: 16px;
+	line-height: 22px;
+}
+
+.production-page main .content-box .center .backlink-title span a{
+	font-family: 'Roboto _GEO Mt';
+	font-size: 16px;
+	line-height: 16px;
+	font-weight: bold;
+}
+
+.production-page main .content-box .center .production-list .product p{
+	font-family: 'Roboto _GEO Mt regular';
+	font-size: 16px;
+	line-height: 16px;
+}
+
+.production-page main .content-box .center .pagination ul li a{
+	font-family: 'Roboto _GEO Mt regular';
+	font-size: 14px;
+	line-height: 24px;
+}
+
+.about-page .content-box .content h3{
+	font-family: 'Roboto _GEO Mt';
+	font-size: 16px;
+	line-height: 16px;
+	font-weight: bold;
+}
+
+.about-page .content-box .content p{
+	font-family: 'Roboto _Nusx';
+	font-size: 16px;
+	line-height: 22px;
 }
