@@ -2082,10 +2082,6 @@ footer .center .copyright a::after{
 	color: $color2;
 }
 
-.about-page main::before{
-	content: none;
-}
-
 .about-page .center .sec-title{
 	padding: 60px 0;
 }
@@ -2246,6 +2242,10 @@ footer .center .copyright a::after{
 
 .about-page main .content-box .center .data-boxes .custom-row .data:hover .content p{
 	color:$color2;
+}
+
+.team-page main::before{
+	content: none;
 }
 
 @-moz-document url-prefix() {
